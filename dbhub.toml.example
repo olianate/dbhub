@@ -203,6 +203,49 @@ dsn = "postgres://postgres:postgres@localhost:5432/myapp"
 # dsn = "sqlite:///:memory:"
 
 # ============================================================================
+# DM8 / DAMENG (达梦数据库 - Chinese Enterprise Database)
+# ============================================================================
+
+# DM8 Local Development (default port 5236)
+# [[sources]]
+# id = "local_dm8"
+# description = "Local DM8 development database"
+# dsn = "dm://SYSDBA:SYSDBA@localhost:5236/DAMENG"
+
+# DM8 with individual parameters (use when password contains special characters)
+# [[sources]]
+# id = "local_dm8"
+# type = "dm8"
+# host = "localhost"
+# port = 5236
+# database = "DAMENG"
+# user = "SYSDBA"
+# password = "your_password"
+
+# DM8 Production Server
+# [[sources]]
+# id = "prod_dm8"
+# description = "Production DM8 database"
+# dsn = "dm://app_user:secure_password@192.168.1.100:5236/PRODUCTION"
+# lazy = true  # Defer connection until first query
+# connection_timeout = 30
+
+# DM8 with SSH tunnel (for remote servers)
+# [[sources]]
+# id = "remote_dm8"
+# description = "Remote DM8 via SSH tunnel"
+# dsn = "dm://app_user:password@10.0.1.50:5236/BUSINESS_DB"
+# ssh_host = "bastion.company.com"
+# ssh_port = 22
+# ssh_user = "deploy"
+# ssh_key = "~/.ssh/id_ed25519"
+
+# Note: DM8 DSN formats:
+#   dm://user:password@host:port/database
+#   dameng://user:password@host:port/database  (alternative protocol)
+# Default port: 5236
+
+# ============================================================================
 # TOOL CONFIGURATION (Optional)
 # ============================================================================
 #
@@ -322,9 +365,10 @@ dsn = "postgres://postgres:postgres@localhost:5432/myapp"
 #   MariaDB:     mariadb://user:pass@host:3306/database
 #   SQL Server:  sqlserver://user:pass@host:1433/database
 #   SQLite:      sqlite:///path/to/file.db  or  sqlite:///:memory:
+#   DM8/Dameng:  dm://user:pass@host:5236/database  or  dameng://user:pass@host:5236/database
 #
 # Default Ports:
-#   PostgreSQL: 5432 | MySQL/MariaDB: 3306 | SQL Server: 1433
+#   PostgreSQL: 5432 | MySQL/MariaDB: 3306 | SQL Server: 1433 | DM8: 5236
 #
 # SSH Tunnel Options:
 #   ssh_host, ssh_port (default: 22), ssh_user

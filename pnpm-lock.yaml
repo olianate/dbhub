@@ -100,6 +100,9 @@ importers:
       better-sqlite3:
         specifier: ^11.9.0
         version: 11.10.0
+      dmdb:
+        specifier: ^1.0.0
+        version: 1.0.48286
       mariadb:
         specifier: ^3.4.0
         version: 3.4.2
@@ -850,56 +853,67 @@ packages:
     resolution: {integrity: sha512-gTJ/JnnjCMc15uwB10TTATBEhK9meBIY+gXP4s0sHD1zHOaIh4Dmy1X9wup18IiY9tTNk5gJc4yx9ctj/fjrIw==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.43.0':
     resolution: {integrity: sha512-ZJ3gZynL1LDSIvRfz0qXtTNs56n5DI2Mq+WACWZ7yGHFUEirHBRt7fyIk0NsCKhmRhn7WAcjgSkSVVxKlPNFFw==}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.43.0':
     resolution: {integrity: sha512-8FnkipasmOOSSlfucGYEu58U8cxEdhziKjPD2FIa0ONVMxvl/hmONtX/7y4vGjdUhjcTHlKlDhw3H9t98fPvyA==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.43.0':
     resolution: {integrity: sha512-KPPyAdlcIZ6S9C3S2cndXDkV0Bb1OSMsX0Eelr2Bay4EsF9yi9u9uzc9RniK3mcUGCLhWY9oLr6er80P5DE6XA==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-loongarch64-gnu@4.43.0':
     resolution: {integrity: sha512-HPGDIH0/ZzAZjvtlXj6g+KDQ9ZMHfSP553za7o2Odegb/BEfwJcR0Sw0RLNpQ9nC6Gy8s+3mSS9xjZ0n3rhcYg==}
     cpu: [loong64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.43.0':
     resolution: {integrity: sha512-gEmwbOws4U4GLAJDhhtSPWPXUzDfMRedT3hFMyRAvM9Mrnj+dJIFIeL7otsv2WF3D7GrV0GIewW0y28dOYWkmw==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.43.0':
     resolution: {integrity: sha512-XXKvo2e+wFtXZF/9xoWohHg+MuRnvO29TI5Hqe9xwN5uN8NKUYy7tXUG3EZAlfchufNCTHNGjEx7uN78KsBo0g==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.43.0':
     resolution: {integrity: sha512-ruf3hPWhjw6uDFsOAzmbNIvlXFXlBQ4nk57Sec8E8rUxs/AI4HD6xmiiasOOx/3QxS2f5eQMKTAwk7KHwpzr/Q==}
     cpu: [riscv64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.43.0':
     resolution: {integrity: sha512-QmNIAqDiEMEvFV15rsSnjoSmO0+eJLoKRD9EAa9rrYNwO/XRCtOGM3A5A0X+wmG+XRrw9Fxdsw+LnyYiZWWcVw==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.43.0':
     resolution: {integrity: sha512-jAHr/S0iiBtFyzjhOkAics/2SrXE092qyqEg96e90L3t9Op8OTzS6+IX0Fy5wCt2+KqeHAkti+eitV0wvblEoQ==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.43.0':
     resolution: {integrity: sha512-3yATWgdeXyuHtBhrLt98w+5fKurdqvs8B53LaoKD7P7H7FKOONLsBVMNl9ghPQZQuYcceV5CDyPfyfGpMWD9mQ==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.43.0':
     resolution: {integrity: sha512-wVzXp2qDSCOpcBCT5WRWLmpJRIzv23valvcTwMHEobkjippNf+C3ys/+wf07poPkeNix0paTNemB2XrHr2TnGw==}
@@ -1129,24 +1143,28 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@tailwindcss/oxide-linux-arm64-musl@4.1.18':
     resolution: {integrity: sha512-1px92582HkPQlaaCkdRcio71p8bc8i/ap5807tPRDK/uw953cauQBT8c5tVGkOwrHMfc2Yh6UuxaH4vtTjGvHg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@tailwindcss/oxide-linux-x64-gnu@4.1.18':
     resolution: {integrity: sha512-v3gyT0ivkfBLoZGF9LyHmts0Isc8jHZyVcbzio6Wpzifg/+5ZJpDiRiUhDLkcr7f/r38SWNe7ucxmGW3j3Kb/g==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@tailwindcss/oxide-linux-x64-musl@4.1.18':
     resolution: {integrity: sha512-bhJ2y2OQNlcRwwgOAGMY0xTFStt4/wyU6pvI6LSuZpRgKQwxTec0/3Scu91O8ir7qCR3AuepQKLU/kX99FouqQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@tailwindcss/oxide-wasm32-wasi@4.1.18':
     resolution: {integrity: sha512-LffYTvPjODiP6PT16oNeUQJzNVyJl1cjIebq/rWWBF+3eDst5JGEFSc5cWxyRCJ0Mxl+KyIkqRxk1XPEs9x8TA==}
@@ -1781,6 +1799,18 @@ packages:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
 
+  dmdb@1.0.48286:
+    resolution: {integrity: sha512-ZFCAwAfTeLF3BJnm7m24JtnwTMaIuv9UrTu9sWw/SQSbnwiWw8W3ap471D5TsqpUE1gGpBHI+lDyOUYH1/4PCg==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      snappy: ^7.2.0
+      snappyjs: ^0.7.0
+    peerDependenciesMeta:
+      snappy:
+        optional: true
+      snappyjs:
+        optional: true
+
   docker-compose@1.2.0:
     resolution: {integrity: sha512-wIU1eHk3Op7dFgELRdmOYlPYS4gP8HhH1ZmZa13QZF59y0fblzFDFmKPhyc05phCy2hze9OEvNZAsoljrs+72w==}
     engines: {node: '>= 6.0.0'}
@@ -2053,6 +2083,10 @@ packages:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
 
+  iconv-lite@0.5.2:
+    resolution: {integrity: sha512-kERHXvpSaB4aU3eANwidg79K8FlrN77m8G9V+0vOR3HYaRifrlwMEpT7ZBJqLSEIHnEgJTHcWK82wwLwwKwtag==}
+    engines: {node: '>=0.10.0'}
+
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
@@ -2201,24 +2235,28 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.30.2:
     resolution: {integrity: sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.30.2:
     resolution: {integrity: sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.30.2:
     resolution: {integrity: sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.30.2:
     resolution: {integrity: sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ==}
@@ -5403,6 +5441,11 @@ snapshots:
 
   diff@4.0.2: {}
 
+  dmdb@1.0.48286:
+    dependencies:
+      iconv-lite: 0.5.2
+    optional: true
+
   docker-compose@1.2.0:
     dependencies:
       yaml: 2.8.0
@@ -5755,6 +5798,11 @@ snapshots:
   iconv-lite@0.4.24:
     dependencies:
       safer-buffer: 2.1.2
+
+  iconv-lite@0.5.2:
+    dependencies:
+      safer-buffer: 2.1.2
+    optional: true
 
   iconv-lite@0.6.3:
     dependencies:

@@ -21,11 +21,11 @@
     "build": "pnpm run generate:api-types && tsup && cd frontend && pnpm run build",
     "build:backend": "pnpm run generate:api-types && tsup",
     "build:frontend": "cd frontend && pnpm run build",
-    "start": "node dist/index.js",
+    "start": "node --openssl-legacy-provider dist/index.js",
     "dev": "concurrently --kill-others \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
-    "dev:backend": "NODE_ENV=development tsx src/index.ts --transport=http",
+    "dev:backend": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development tsx src/index.ts --transport=http",
     "dev:frontend": "cd frontend && pnpm run dev",
-    "crossdev": "cross-env NODE_ENV=development tsx src/index.ts",
+    "crossdev": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development tsx src/index.ts",
     "generate:api-types": "openapi-typescript src/api/openapi.yaml -o src/api/openapi.d.ts",
     "test": "vitest run",
     "test:unit": "vitest run --project unit",
@@ -55,7 +55,8 @@
     "mariadb": "^3.4.0",
     "mssql": "^11.0.1",
     "mysql2": "^3.13.0",
-    "pg": "^8.13.3"
+    "pg": "^8.13.3",
+    "dmdb": "^1.0.0"
   },
   "devDependencies": {
     "@testcontainers/mariadb": "^11.0.3",
