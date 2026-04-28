@@ -1,6 +1,6 @@
 {
   "name": "@olianate/dbhub",
-  "version": "0.21.2",
+  "version": "0.21.3",
   "mcpName": "io.github.olianate/dbhub",
   "description": "Minimal, token-efficient Database MCP Server with DM8 support (PostgreSQL, MySQL, SQL Server, SQLite, MariaDB, DM8)",
   "repository": {
@@ -13,7 +13,7 @@
     "dbhub": "dist/index.js"
   },
   "files": [
-    "dist",
+    "dist/**/*",
     "LICENSE",
     "README.md"
   ],
